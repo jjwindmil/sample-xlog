@@ -10,5 +10,10 @@ export default function useXlogActions(){
     (str: string) => dispatch(xlogActions.test(str)),
     [dispatch]
   );
-  return { onTest };
+
+  const onGetData = useCallback(
+    () => dispatch(xlogActions.getData()),
+    [dispatch]
+  );
+  return { onTest, onGetData };
 }

@@ -76,6 +76,7 @@ export default class Drag {
    * Drag 이벤트 발생할때 실행 되는 메서드
    */
   public drag() {
+    console.log(this);
     const t = this;
 
     // Drag 이벤트 발생 시 실행
@@ -111,7 +112,7 @@ export default class Drag {
       }
       t.setPosition(x, y, width, height);
     });
-
+    console.log(this);
     return this;
   }
 
@@ -213,8 +214,8 @@ export default class Drag {
 
       // 선택된 area 정보
       const selectArea = {
-        fromTime: startTime.getTime(),
-        toTime: endTime.getTime() + 1000,
+        fromTime: startTime,
+        toTime: endTime,
         fromElapsed: minTime,
         toElapsed: maxTime,
       };

@@ -6,6 +6,10 @@ export type XlogActions = ActionType<typeof actions>;
 export interface XlogState {
   xlog: any[];
   profile: any[];
+};
 
 
-}
+export interface SetDataParam{
+  key: keyof XlogState;
+  value: any;
+};

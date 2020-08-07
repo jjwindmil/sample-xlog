@@ -3,11 +3,12 @@ import {Button, Input} from "antd";
 import useXlogActions from "../../hooks/xlog/useXlogActions";
 export default function ButtonComp(){
   const [value, setValue] = useState("");
-  const { onTest } = useXlogActions();
+  const { onTest , onGetData} = useXlogActions();
 
   const onClick = (e:any) =>{
     e.preventDefault();
-    onTest(value);
+    //onTest(value);
+    onGetData();
   };
   return (
     <>

@@ -1,6 +1,7 @@
 import {createReducer} from 'typesafe-actions';
 import {XlogActions, XlogState } from './types';
-import {TEST} from "./actions";
+import {TEST, SET_DATA} from "./actions";
+
 
 const initialState = {
   xlog:[],
@@ -14,6 +15,11 @@ const state = createReducer<XlogState, XlogActions>(initialState, {
     console.log(state);
     console.log(payload);
     return state;
+  },
+  [SET_DATA] : (state, action) => {
+    const { key, value} = action.payload;
+
+    return {...state,[key]:value};
   }
 });
 

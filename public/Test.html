@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!--
+  Block
+  항상 새로운 라인에서 시작한다.
+화면 크기 전체의 가로폭을 차지한다. (width: 100%)
+width, height, margin, padding 프로퍼티 지정이 가능하다.
+block 레벨 요소 내에 inline 레벨 요소를 포함할 수 있다
+block 레벨 요소 예
+div
+h1 ~ h6
+p
+ol
+ul
+li
+hr
+table
+form
+  -->
+  <style>
+    div {
+      width: 300px;
+      height: 100px;
+      //background-color: cornsilk;
+      border: 1px solid ;
+      overflow: auto;
+    }
+    .border-rounded {
+      border-radius: 10px 40px 40px 10px;
+    }
+    span {
+      background-color: red;
+      color: white;
+      padding: 10px;
+      /* width, height, margin-top, margin-bottom 프로퍼티를 지정할 수 없다. */
+      /* width: 200px; */
+      /* margin: 10px; */
+      /* 상, 하 여백은 line-height로 지정한다. */
+      /* line-height: 50px; */
+    }
+  </style>
+  <style>
+
+  </style>
+</head>
+<body>
+<div class="border-rounded">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+<div>
+  <h2>블록 레벨 요소</h2>
+  <p>width, height 미지정 → width: 100%; height: auto;</p>
+</div>
+<div>
+  <h2>블록 레벨 요소</h2>
+  <p>width: 300px → width: 300px; height: auto;</p>
+</div>
+<h1>My <span>Important</span> Heading</h1>
+<span>Inline</span>
+<span>Inline</span><span>Inline</span>
+</body>
+</html>
